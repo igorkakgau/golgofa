@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Великая Пассия - Страдания Христа</title>
+    <!-- Подключение Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Пользовательские стили -->
+    <style>
+        body {
+            background-color: #FDF5E6; /* Мягкий золотистый фон для всего сайта */
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #D4AF37; /* Золотистый фон навигационного меню */
+        }
+        .navbar-brand, .nav-link {
+            color: #3C2F2F !important; /* Тёмно-коричневый цвет текста для контраста */
+        }
+        .navbar-brand:hover, .nav-link:hover {
+            color: #FFFFFF !important; /* Белый цвет при наведении */
+        }
+        .carousel-caption {
+            color: #FFFFFF; /* Белый текст для подписей в карусели */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для читаемости */
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%); /* Белые стрелки для контраста */
+        }
+        .section-title {
+            color: #D4AF37; /* Золотистый цвет заголовков секций */
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .accordion-button {
+            font-size: 1.1rem;
+            background-color: #FDF5E6; /* Соответствует фону сайта */
+            color: #3C2F2F; /* Тёмно-коричневый текст */
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #D4AF37; /* Золотистый фон для активного аккордеона */
+            color: #FFFFFF; /* Белый текст для активного состояния */
+        }
+        .footer {
+            background-color: #D4AF37; /* Золотистый фон подвала */
+            color: #FFFFFF; /* Белый текст в подвале */
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        @media (max-width: 768px) {
+            .carousel-caption h1 {
+                font-size: 2rem; /* Уменьшаем заголовок */
+            }
+            .carousel-caption p {
+                font-size: 1rem; /* Уменьшаем текст */
+            }
+            .section-title {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            .accordion-button {
+                font-size: 0.9rem;
+            }
+            .accordion-body {
+                font-size: 0.85rem;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-caption h1 {
+                font-size: 1.5rem;
+            }
+            .carousel-caption p {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.25rem;
+            }
+            .accordion-button {
+                font-size: 0.8rem;
+            }
+            .accordion-body {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Великая Пассия</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#preface">Предисловие Владыки Антония</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#artist">Слово художнику</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#author">От автора</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sufferings">Страдания окружающих</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mother">Страдания Матери</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#son">Страдания Сына</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#father">Страдания Отца</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#matthew">Пассия по Матфею</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mark">Пассия по Марку</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#luke">Пассия по Луке</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#john">Пассия по Иоанну</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jacobJesus">Борение Иакова и борение Иисуса</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gethsemane">Борение Гефсиманское</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trial">Борение на суде</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#golgotha">Борение Голгофское</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tomb">Борение во Гробе и преисподней</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Главная секция с каруселью -->
+    <section id="home">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Первый слайд -->
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1500x500?text=Крест" class="d-block w-100" alt="Крест">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Великая Пассия</h1>
+                        <p class="lead">Страдания Христа - исцеление мира</p>
+                    </div>
+                </div>
+                <!-- Второй слайд -->
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1500x500?text=Гефсимания" class="d-block w-100" alt="Гефсимания">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Борение в Гефсимании</h1>
+                        <p class="lead">Молитва перед страданиями</p>
+                    </div>
+                </div>
+                <!-- Третий слайд -->
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1500x500?text=Голгофа" class="d-block w-100" alt="Голгофа">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1 class="display-4">Голгофский Крест</h1>
+                        <p class="lead">Победа над смертью</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Кнопки управления -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Секция Предисловие Владыки Антония -->
+    <section id="preface" class="container py-5">
+        <h2 class="section-title text-center">Предисловие Владыки Антония</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>Предлагаемый труд сей не есть богословский трактат...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Слово художнику -->
+    <section id="artist" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Слово художнику</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>Родился я на Урале в Челябинске в 1955 году...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция От автора -->
+    <section id="author" class="container py-5">
+        <h2 class="section-title text-center">От автора</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>В бескрайние лесостепи Западной Сибири...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о Страданиях окружающих -->
+    <section id="sufferings" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Страдания Окружающих Крест</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="sufferingsAccordion">
+                    <!-- Подразделы опущены для краткости -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о Страданиях Матери -->
+    <section id="mother" class="container py-5">
+        <h2 class="section-title text-center">Страдания Матери</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="motherAccordion">
+                    <!-- Подразделы опущены для краткости -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о Страданиях Сына -->
+    <section id="son" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Страдания Сына</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="sonAccordion">
+                    <!-- Подразделы опущены для краткости -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция о Страданиях Отца -->
+    <section id="father" class="container py-5">
+        <h2 class="section-title text-center">Страдания Отца</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="fatherAccordion">
+                    <!-- Подразделы опущены для краткости -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Пассия по Матфею -->
+    <section id="matthew" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Пассия по Матфею</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="matthewAccordion">
+                    <!-- Телесные страдания -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingPhysical">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhysical" aria-expanded="false" aria-controls="collapsePhysical">
+                                Телесные страдания
+                            </button>
+                        </h2>
+                        <div id="collapsePhysical" class="accordion-collapse collapse" aria-labelledby="headingPhysical" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>Тело Спасителя было предано мукам: бичевание разрывало Его плоть, терновый венец пронзал чело, а гвозди вонзались в руки и ноги, как повествует Матфей (Мф. 27:26-31)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Душевные страдания -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSpiritual">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpiritual" aria-expanded="false" aria-controls="collapseSpiritual">
+                                Душевные страдания
+                            </button>
+                        </h2>
+                        <div id="collapseSpiritual" class="accordion-collapse collapse" aria-labelledby="headingSpiritual" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>В Гефсимании душа Его скорбела смертельно, Он молился до кровавого пота, предчувствуя предательство и одиночество (Мф. 26:38-39)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Страдания за грехи людские -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSins">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSins" aria-expanded="false" aria-controls="collapseSins">
+                                Страдания за грехи людские
+                            </button>
+                        </h2>
+                        <div id="collapseSins" class="accordion-collapse collapse" aria-labelledby="headingSins" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>Он взял на Себя грехи мира, став Агнцем, закланным за всех, чтобы даровать прощение через Свою кровь (Мф. 26:28)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Се, Человек! -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingBeholdMan">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBeholdMan" aria-expanded="false" aria-controls="collapseBeholdMan">
+                                Се, Человек!
+                            </button>
+                        </h2>
+                        <div id="collapseBeholdMan" class="accordion-collapse collapse" aria-labelledby="headingBeholdMan" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>Пилат представил Его толпе со словами «Се, Человек!», израненного, но полного Божественного достоинства (ср. Ин. 19:5, контекст Мф. 27:29)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Адам -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAdam">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdam" aria-expanded="false" aria-controls="collapseAdam">
+                                Адам
+                            </button>
+                        </h2>
+                        <div id="collapseAdam" class="accordion-collapse collapse" aria-labelledby="headingAdam" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>Христос, второй Адам, исправил падение первого Адама, умерев на древе Креста вместо древа греха (традиция, связанная с Мф. 27:33)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Следы -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTraces">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTraces" aria-expanded="false" aria-controls="collapseTraces">
+                                Следы
+                            </button>
+                        </h2>
+                        <div id="collapseTraces" class="accordion-collapse collapse" aria-labelledby="headingTraces" data-bs-parent="#matthewAccordion">
+                            <div class="accordion-body">
+                                <p>Следы Его крови на пути к Голгофе и раны на теле стали вечным свидетельством Его любви и жертвы (Мф. 27:31-33)...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Пассия по Марку -->
+    <section id="mark" class="container py-5">
+        <h2 class="section-title text-center">Пассия по Марку</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>На второй Пассии читается Евангелие от Марка...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Пассия по Луке -->
+    <section id="luke" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Пассия по Луке</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="lukeAccordion">
+                    <!-- Отец жертвует Сыном -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFatherSacrifices">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFatherSacrifices" aria-expanded="false" aria-controls="collapseFatherSacrifices">
+                                Отец жертвует Сыном
+                            </button>
+                        </h2>
+                        <div id="collapseFatherSacrifices" class="accordion-collapse collapse" aria-labelledby="headingFatherSacrifices" data-bs-parent="#lukeAccordion">
+                            <div class="accordion-body">
+                                <p>Отец Небесный предал Сына Своего на крестные муки, чтобы через Его жертву спасти человечество, как Лука повествует о последних словах Христа (Лк. 23:46)...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Пассия по Иоанну -->
+    <section id="john" class="container py-5">
+        <h2 class="section-title text-center">Пассия по Иоанну</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="johnAccordion">
+                    <!-- Страждущий о птенцах рассеявшихся -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingChicks">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseChicks" aria-expanded="false" aria-controls="collapseChicks">
+                                Страждущий о птенцах рассеявшихся
+                            </button>
+                        </h2>
+                        <div id="collapseChicks" class="accordion-collapse collapse" aria-labelledby="headingChicks" data-bs-parent="#johnAccordion">
+                            <div class="accordion-body">
+                                <p>Христос скорбел о Своих рассеянных чадах, желая собрать их, как наседка собирает птенцов под крылья свои (ср. Мф. 23:37, Ин. 11:52)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- "Скорбь высоко летящего о тех, кто не может летать" -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHighFlyer">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHighFlyer" aria-expanded="false" aria-controls="collapseHighFlyer">
+                                "Скорбь высоко летящего о тех, кто не может летать"
+                            </button>
+                        </h2>
+                        <div id="collapseHighFlyer" class="accordion-collapse collapse" aria-labelledby="headingHighFlyer" data-bs-parent="#johnAccordion">
+                            <div class="accordion-body">
+                                <p>Вознёсшись на Крест, Он скорбел о тех, кто остался внизу, не способных воспарить к свету истины, как орёл над землёй (Ин. 12:32)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Томление орла несущего огонь -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEagleFire">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEagleFire" aria-expanded="false" aria-controls="collapseEagleFire">
+                                Томление орла несущего огонь
+                            </button>
+                        </h2>
+                        <div id="collapseEagleFire" class="accordion-collapse collapse" aria-labelledby="headingEagleFire" data-bs-parent="#johnAccordion">
+                            <div class="accordion-body">
+                                <p>Как орёл, несущий пламя, Он томился на Кресте, принося огонь Божественной любви, чтобы возжечь сердца людей (Ин. 12:24-27)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Орёл и змей -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEagleSerpent">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEagleSerpent" aria-expanded="false" aria-controls="collapseEagleSerpent">
+                                Орёл и змей
+                            </button>
+                        </h2>
+                        <div id="collapseEagleSerpent" class="accordion-collapse collapse" aria-labelledby="headingEagleSerpent" data-bs-parent="#johnAccordion">
+                            <div class="accordion-body">
+                                <p>Орёл, символ Христа, возвысился над змеем-дьяволом, сокрушая его власть через Свою крестную победу (Ин. 3:14-15)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Птица Феникс -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingPhoenix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhoenix" aria-expanded="false" aria-controls="collapsePhoenix">
+                                Птица Феникс
+                            </button>
+                        </h2>
+                        <div id="collapsePhoenix" class="accordion-collapse collapse" aria-labelledby="headingPhoenix" data-bs-parent="#johnAccordion">
+                            <div class="accordion-body">
+                                <p>Как Феникс, Христос умер и воскрес из мёртвых, возродившись в славе, чтобы даровать вечную жизнь верующим (Ин. 11:25-26)...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Борение Иакова и борение Иисуса -->
+    <section id="jacobJesus" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Борение Иакова и борение Иисуса</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="accordion" id="jacobJesusAccordion">
+                    <!-- Борение Иакова -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingJacob">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJacob" aria-expanded="false" aria-controls="collapseJacob">
+                                Борение Иакова
+                            </button>
+                        </h2>
+                        <div id="collapseJacob" class="accordion-collapse collapse" aria-labelledby="headingJacob" data-bs-parent="#jacobJesusAccordion">
+                            <div class="accordion-body">
+                                <p>Иаков боролся с таинственным Мужем у потока Иавок до рассвета, ища благословения, и получил новое имя — Израиль, знаменующее его победу через веру (Быт. 32:24-30)...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Борение Иисуса -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingJesus">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJesus" aria-expanded="false" aria-controls="collapseJesus">
+                                Борение Иисуса
+                            </button>
+                        </h2>
+                        <div id="collapseJesus" class="accordion-collapse collapse" aria-labelledby="headingJesus" data-bs-parent="#jacobJesusAccordion">
+                            <div class="accordion-body">
+                                <p>Иисус в Гефсимании боролся в молитве, принимая чашу страданий, и через Свою смерть на Кресте одержал победу над грехом и смертью для всего человечества (Мф. 26:39, Лк. 22:44)...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Борение Гефсиманское -->
+    <section id="gethsemane" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Борение Гефсиманское</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>В Гефсиманском саду Христос пережил великое борение...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Борение на суде -->
+    <section id="trial" class="container py-5">
+        <h2 class="section-title text-center">Борение на суде</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>На суде у Пилата и первосвященников Христос претерпел клевету...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Борение Голгофское -->
+    <section id="golgotha" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Борение Голгофское</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>На Голгофе совершилось величайшее борение Христа с грехом и смертью...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция Борение во Гробе и преисподней -->
+    <section id="tomb" class="container py-5">
+        <h2 class="section-title text-center">Борение во Гробе и преисподней</h2>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <p>Во Гробе и в преисподней Христос одержал победу над смертью...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer text-center py-3">
+        <p>© 2025 Великая Пассия. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключение Bootstrap JS и зависимостей -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
